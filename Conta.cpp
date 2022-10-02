@@ -2,6 +2,15 @@
 
 #include "Conta.hpp"
 #include<iostream>
+#include<string>
+
+Conta::Conta(std::string Numero,std::string Titular,std::string Cpf){
+    this->numeroConta=Numero;
+    this->nomeTitular=Titular;
+    this->cpfTitular=Cpf;
+    this->saldo=0;
+}
+
 
 void Conta::sacar(float valorASacar){
     if(valorASacar<0){
@@ -13,8 +22,6 @@ void Conta::sacar(float valorASacar){
     }
     
         saldo=saldo-valorASacar;
-    
-
 }
 
 void Conta::depositar(float valorADepositar){
@@ -25,7 +32,30 @@ void Conta::depositar(float valorADepositar){
     
 }
 
-float Conta::olharSaldo(){
+float Conta::olharSaldo() const  { //Esse método não modifica nada por isso usei o const
     return saldo;
+}
+std::string Conta::olharNomeTitular(){
+    return nomeTitular;
+}
+std::string Conta::olharCpfTitular(){
+    return cpfTitular;
+}
+std::string Conta::olharNumeroConta(){
+    return numeroConta;
+}
+
+void Conta::definirCpfTitular(std::string cpf){
+    cpfTitular=cpf;
 
 }
+void Conta::definirNomeTitular(std::string nome){
+    nomeTitular=nome;
+
+}
+void Conta::definirNumeroConta(std::string numero){
+    numeroConta=numero;
+
+}
+
+ 

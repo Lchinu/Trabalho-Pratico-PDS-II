@@ -12,9 +12,18 @@ private:
     float saldo;
 
 public:
+    Conta(std::string numero,std::string nome,std::string cpf);
     void sacar(float valorASacar);
     void depositar(float valorADepositar);
-    float olharSaldo();
+    float olharSaldo() const; //Esse método não modifica nada , por isso usei o const 
+    std::string olharNomeTitular();
+    std::string olharCpfTitular();
+    std::string olharNumeroConta();
+    void definirNomeTitular(std::string nome);
+    void definirCpfTitular(std::string cpf);
+    void definirNumeroConta(std::string numero);
+
+    
     
 
 
