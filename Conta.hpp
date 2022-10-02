@@ -19,9 +19,7 @@ public:
     std::string olharNomeTitular();
     std::string olharCpfTitular();
     std::string olharNumeroConta();
-    void definirNomeTitular(std::string nome);
-    void definirCpfTitular(std::string cpf);
-    void definirNumeroConta(std::string numero);
+    
 
     
     

@@ -45,17 +45,6 @@ std::string Conta::olharNumeroConta(){
     return numeroConta;
 }
 
-void Conta::definirCpfTitular(std::string cpf){
-    cpfTitular=cpf;
 
-}
-void Conta::definirNomeTitular(std::string nome){
-    nomeTitular=nome;
-
-}
-void Conta::definirNumeroConta(std::string numero){
-    numeroConta=numero;
-
-}
 
  
