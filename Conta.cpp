@@ -4,11 +4,14 @@
 #include<iostream>
 #include<string>
 
+int Conta::numeroDeContas=0;
+
 Conta::Conta(std::string Numero,std::string Titular,std::string Cpf){
     this->numeroConta=Numero;
     this->nomeTitular=Titular;
     this->cpfTitular=Cpf;
     this->saldo=0;
+    numeroDeContas++;
 }
 
 

@@ -4,7 +4,8 @@
 #include<string>
 
 class Conta{
-
+public:
+static int numeroDeContas;
 private:
     std::string numeroConta;
     std::string cpfTitular;
