@@ -16,8 +16,9 @@ int main(){
     Conta conta2;
     
     
-    conta1.depositar(100000);
+    conta1.depositar(10001);
     conta1.sacar(1000);
+    cout<<conta1.olharSaldo()<<endl;
 
     
     

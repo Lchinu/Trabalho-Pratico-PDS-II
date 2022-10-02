@@ -19,8 +19,13 @@ void Conta::sacar(float valorASacar){
 
 void Conta::depositar(float valorADepositar){
     if(valorADepositar<0){
-        std::cout<<"Impossível sacar valores negativos"<<std::endl;
+        std::cout<<"Impossível depositar valores negativos"<<std::endl;
     }
     saldo=saldo+valorADepositar;
     
+}
+
+float Conta::olharSaldo(){
+    return saldo;
+
 }

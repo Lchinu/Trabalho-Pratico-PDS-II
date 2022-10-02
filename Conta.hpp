@@ -4,17 +4,18 @@
 #include<string>
 
 class Conta{
-    private:
-   
+
+private:
     std::string numeroConta;
     std::string cpfTitular;
     std::string nomeTitular;
     float saldo;
 
-    public:
-
+public:
     void sacar(float valorASacar);
     void depositar(float valorADepositar);
+    float olharSaldo();
+    
 
 
 };
