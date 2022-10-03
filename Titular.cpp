@@ -1,10 +1,11 @@
 #include "Titular.hpp"
+
 #include<string>
 #include<iostream>
 
-Titular::Titular(std::string nome,std::string cpf){
-    nome=nome;
-    cpf=cpf;
+Titular::Titular(std::string Nome,std::string Cpf){
+    nome=Nome;
+    cpf=Cpf;
     verificaTamanhoDoNome();
     
 
