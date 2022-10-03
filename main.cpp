@@ -2,6 +2,8 @@
 #include<string>
 #include "Conta.hpp"
 #include "Conta.cpp"
+#include "Titular.hpp"
+
 
 using namespace std;
 
@@ -12,9 +14,10 @@ void ExibeSaldo(Conta conta){ //Estou recebendo uma referência constante pois ,
 
 int main(){
 
-  
-    
-    Conta conta1("123456","Riquelme Batista","000.000.000-12");
+    Titular titularexemplo("Riquelme Batista","000.000.111-11");
+    Conta umaConta("123456",titularexemplo);
+
+   /* Conta conta1("123456","Riquelme Batista","000.000.000-12");
     conta1.depositar(1000);
     ExibeSaldo(conta1);
     cout<<conta1.olharCpfTitular()<<endl;
@@ -30,7 +33,7 @@ int main(){
 
     cout<<"Número de Contas do Banco : "<<conta2.numeroDeContas<<endl;
 
-    
+    */
     
 
 
