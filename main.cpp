@@ -4,6 +4,8 @@
 #include "Conta.cpp"
 #include "Titular.hpp"
 #include "Titular.cpp"
+#include "Cpf.hpp"
+#include "Cpf.cpp"
 
 
 
@@ -17,8 +19,12 @@ void ExibeSaldo(Conta &conta){ //Estou recebendo uma referência constante pois 
 
 int main(){
 
-    Titular titularexemplo("Riquelme Batista","000.000.111-11");
+    
+   Titular titularexemplo("Riquelme Batista",Cpf("000.000.000-22"));
    Conta umaConta("123456",titularexemplo);
+   umaConta.depositar(10);
+   umaConta.sacar(20);
+   //ExibeSaldo(umaConta);
 
 
 

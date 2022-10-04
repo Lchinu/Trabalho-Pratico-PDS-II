@@ -1,15 +1,17 @@
 #include "Titular.hpp"
-
+#include "Cpf.hpp"
 #include<string>
 #include<iostream>
 
-Titular::Titular(std::string Nome,std::string Cpf){
-    nome=Nome;
-    cpf=Cpf;
-    verificaTamanhoDoNome();
+Titular::Titular(std::string Nome,Cpf cpfparametro):
+    nome(Nome),
+    cpfparametro(cpfparametro)
+     
     
-
-}
+   {
+      verificaTamanhoDoNome();
+   }
+    
 void Titular::verificaTamanhoDoNome(){
     if(nome.size()<5){
     std::cout<<"Nome muito pequeno"<<std::endl;
@@ -20,6 +22,6 @@ void Titular::verificaTamanhoDoNome(){
 std::string Titular::recuperaNome(){
     return nome;
 }
-std::string Titular::recuperaCpf(){
-    return cpf;
-}
+//std::string Titular::recuperaCpf(){
+   // return cpf;
+//}

@@ -8,10 +8,7 @@ int Conta::numeroDeContas=0;
 
 /*Conta::Conta(std::string Numero,Titular titular){
     this->numeroConta=Numero;
-    titular(){
-
-
-    };
+    Titular::titular();
     this->saldo=0;
     numeroDeContas++;
 }*/
