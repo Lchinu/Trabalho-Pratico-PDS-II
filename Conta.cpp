@@ -28,6 +28,7 @@ void Conta::sacar(float valorASacar){
 
     if(saldo<valorASacar){
         std::cout<<"Saldo insuficiente"<<std::endl;
+        exit(1);
     }
     
         saldo=saldo-valorASacar;
@@ -36,9 +37,11 @@ void Conta::sacar(float valorASacar){
 void Conta::depositar(float valorADepositar){
     if(valorADepositar<0){
         std::cout<<"Impossível depositar valores negativos"<<std::endl;
+        exit(1);
     }
-    saldo=saldo+valorADepositar;
-    
+    else{
+        saldo=saldo+valorADepositar;
+    }
 }
 
 float Conta::olharSaldo() const  { //Esse método não modifica nada por isso usei o const

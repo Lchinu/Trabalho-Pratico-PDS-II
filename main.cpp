@@ -20,11 +20,13 @@ void ExibeSaldo(Conta &conta){ //Estou recebendo uma referência constante pois 
 int main(){
 
     
-   Titular titularexemplo("Riquelme Batista",Cpf("000.000.000-22"));
+   Titular titularexemplo("Riquelme Batista Gomes da Silva ",Cpf("000.000.125-44")); //trabalhando o conceito de composição de classes e seguindo o princípio de engenharia de software : "prefira composição a classes sempre que puder"
    Conta umaConta("123456",titularexemplo);
-   umaConta.depositar(10);
-   umaConta.sacar(20);
-   //ExibeSaldo(umaConta);
+   umaConta.depositar(1000);
+   umaConta.sacar(10000); 
+   std::cout<<titularexemplo.cpfparametro.recuperaCpf()<<std::endl;
+   std::cout<<titularexemplo.recuperaNome()<<std::endl;
+   ExibeSaldo(umaConta);
 
 
 
