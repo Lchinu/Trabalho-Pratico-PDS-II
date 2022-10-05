@@ -8,7 +8,7 @@ class Cpf{
     public:
     Cpf(std::string cpfuser);
     std::string recuperaCpf();
-    void validacaoDeCpf();
+    bool validacaoDeCpf();
    
 
 

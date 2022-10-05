@@ -3,7 +3,7 @@
 #include<string>
 #include<iostream>
 
-Titular::Titular(std::string Nome,Cpf cpfparametro):
+Titular::Titular(std::string Nome, Cpf cpfparametro):
     nome(Nome),
     cpfparametro(cpfparametro)
      
