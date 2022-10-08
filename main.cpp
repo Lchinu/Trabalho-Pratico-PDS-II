@@ -6,6 +6,8 @@
 #include "Titular.cpp"
 #include "Cpf.hpp"
 #include "Cpf.cpp"
+#include "Funcionario.hpp"
+#include "Funcionario.cpp"
 
 
 
@@ -26,14 +28,8 @@ int main(){
 
 
 
-    Titular titularexemplo("Riquelme Batista Gomes da Silva ",Cpf("000.000.125-44")); //trabalhando o conceito de composição de classes e seguindo o princípio de engenharia de software : "prefira composição a classes sempre que puder"
-   Conta umaConta("123456",titularexemplo);
-   umaConta.depositar(1000);
-   umaConta.sacar(100);
-   std::cout<<"O número de contas do sistema de banco atualmente é : "<<umaConta.numeroDeContas<<std::endl;
-   std::cout<<titularexemplo.cpfparametro.recuperaCpf()<<std::endl;
-   std::cout<<titularexemplo.recuperaNome()<<std::endl;
-   ExibeSaldo(umaConta);
+   
+   
    
 
 
