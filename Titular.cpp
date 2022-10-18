@@ -1,6 +1,8 @@
 #include "Titular.hpp"
-#include "Cpf.hpp"
 #include<string>
 #include<iostream>
 
 
+Titular::Titular(Cpf cpf,std::string nome):Pessoa(cpf,nome)
+{ 
+}

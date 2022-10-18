@@ -6,12 +6,7 @@
 
 int Conta::numeroDeContas=0;
 
-/*Conta::Conta(std::string Numero,Titular titular){
-    this->numeroConta=Numero;
-    Titular::titular();
-    this->saldo=0;
-    numeroDeContas++;
-}*/
+
 Conta::Conta(std::string numeroConta, Titular titular):
     numeroConta(numeroConta), 
     titular(titular),
@@ -26,12 +21,16 @@ void Conta::sacar(float valorASacar){
         std::cout<<"Impossível sacar valores negativos"<<std::endl;
     }
 
-    if(saldo<valorASacar){
+    float tarifaDeSaque=valorASacar*0.001;
+    float valorDoSaque=valorASacar+tarifaDeSaque;
+
+    if(saldo<valorDoSaque){
         std::cout<<"Saldo insuficiente"<<std::endl;
         exit(1);
     }
     
-        saldo=saldo-valorASacar;
+
+        saldo=saldo-valorDoSaque;
 }
 
 void Conta::depositar(float valorADepositar){

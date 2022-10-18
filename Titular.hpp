@@ -1,22 +1,15 @@
 #pragma once
 #include<string>
-#include "Cpf.hpp"
+#include "Pessoa.hpp"
 
 
-class Titular{
-    private:
+class Titular:public Pessoa{
+   
     
-    std::string nome;
-    public:
-    Cpf cpfparametro;
-
-    public:
-    Titular(std::string nome,Cpf cpfparametro);
+   public:
+   Titular(Cpf cpf,std::string nome);
     
-    private:
-    void verificaTamanhoDoNome();
-    public:
+   //Posso ter endereço do titular , imposto de renda etc.
+   
 
-    std::string recuperaNome();
-    //std::string recuperaCpf();
 };

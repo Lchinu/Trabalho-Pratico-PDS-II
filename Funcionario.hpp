@@ -1,16 +1,20 @@
 #pragma once
 #include"Cpf.hpp"
 #include<string>
+#include"Pessoa.hpp"
 
 
-class Funcionario{
+class Funcionario:public Pessoa{
 
 private:
-Cpf cpf;
-std::string nome;
+
+float salario;
 
 public:
-Funcionario(Cpf cpf,std::string nome);
+Funcionario(Cpf cpf,std::string nome,float salario);
+std::string recuperaNome();
+
+
 
 
 

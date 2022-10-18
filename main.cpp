@@ -8,6 +8,8 @@
 #include "Cpf.cpp"
 #include "Funcionario.hpp"
 #include "Funcionario.cpp"
+#include "Pessoa.hpp"
+#include "Pessoa.cpp"
 
 
 
@@ -21,11 +23,19 @@ void ExibeSaldo(Conta &conta){ //Estou recebendo uma referência constante pois 
 
 int main(){
 
-   /* Cpf cpf("145.110.506-19");
-    Titular titular("Riquelme Batista",cpf);
-    return 0;*/
+    Titular titular(Cpf("123.456.789-10"), "Douglas Lima");
+    
+    Conta umaConta("123456", titular);
+    umaConta.depositar(1000);
+    umaConta.sacar(499);
 
+    ExibeSaldo(umaConta);
 
+    Funcionario funcionario(Cpf("123.456.789-11"),"Riquelme Batista",1000);
+
+  
+    
+    
 
 
    
