@@ -22,7 +22,7 @@ public:
     void depositar(float valorADepositar);
     float olharSaldo() const; //Esse método não modifica nada , por isso usei o const 
     std::string olharNumeroConta();
-    virtual float taxaDeSaque()const;
+    virtual float taxaDeSaque()const=0; //Nessa classe esse método não tem implementação .Método puramente virtual
     
 
     

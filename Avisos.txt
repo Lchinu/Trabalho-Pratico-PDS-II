@@ -1,5 +1,0 @@
-
-Riquelme 02/10/2022;
-7:35 classe titular
-
-override = verificar se a assinatura do método bate com alguma método virtual da classe base.

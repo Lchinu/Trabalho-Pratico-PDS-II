@@ -12,6 +12,8 @@
 #include "Pessoa.cpp"
 #include"ContaPoupanca.hpp"
 #include"ContaPoupanca.cpp"
+#include"ContaCorrente.hpp"
+#include"ContaCorrente.cpp"
 
 
 
@@ -31,13 +33,15 @@ int main(){
     
     Titular titu1(Cpf("145.110.506-19"),"Riquelme Batista");
     Titular titular(Cpf("123.456.789-10"), "Douglas Lima");
-    Conta umaConta2("000000",titu1);
+    
     ContaPoupanca umaConta("123456", titular);
-    umaConta2.depositar(10000);
-    RealizaSaque(umaConta2);
+    ContaCorrente outraConta("00000",titu1);
+    outraConta.depositar(100000);
     umaConta.depositar(1000);
-    RealizaSaque(umaConta);
-    ExibeSaldo(umaConta2);
+    outraConta.depositar(10000);
+    outraConta.transferePara(umaConta,10000);
+    
+   
     ExibeSaldo(umaConta);
 
     Funcionario funcionario(Cpf("123.456.789-11"),"Riquelme Batista",1000);

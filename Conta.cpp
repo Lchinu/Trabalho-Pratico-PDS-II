@@ -19,14 +19,11 @@ Conta::Conta(std::string numeroConta, Titular titular):
 
 Conta::~Conta(){
     numeroDeContas--;
-    std::cout<<"Destrutor da conta corrente"<<std::endl;
+    std::cout<<"Destrutor da conta "<<std::endl;
 }
 
     
-    float Conta::taxaDeSaque()const {
-    std::cout<<"Chamando método sacar da conta corrente"<<std::endl;            
-    return 0.05;
-}
+   
 
 
     void Conta::sacar(float valorASacar){
