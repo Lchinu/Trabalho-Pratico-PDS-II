@@ -14,6 +14,12 @@
 #include"ContaPoupanca.cpp"
 #include"ContaCorrente.hpp"
 #include"ContaCorrente.cpp"
+#include"Gerente.hpp"
+#include "Gerente.cpp"
+#include "Atendente.hpp"
+#include "Atendente.cpp"
+#include"Autenticavel.hpp"
+#include"Autenticavel.cpp"
 
 
 
@@ -28,11 +34,19 @@ void RealizaSaque(Conta& conta){
     conta.sacar(200);
 }
 
+void FazLogin(Autenticavel& alguem,string senha){
+    if(alguem.autentica(senha)){
+    std::cout<<"Login realizado"<<std::endl;
+    }else{
+        std::cout<<"Senha inválida"<<std::endl;
+    }
+}
+
 int main(){
 
     
-    Titular titu1(Cpf("145.110.506-19"),"Riquelme Batista");
-    Titular titular(Cpf("123.456.789-10"), "Douglas Lima");
+    Titular titu1(Cpf("145.110.506-19"),"Riquelme Batista","Matador123@");
+    Titular titular(Cpf("123.456.789-10"), "Douglas Lima","Matador");
     
     ContaPoupanca umaConta("123456", titular);
     ContaCorrente outraConta("00000",titu1);
@@ -44,7 +58,7 @@ int main(){
    
     ExibeSaldo(umaConta);
 
-    Funcionario funcionario(Cpf("123.456.789-11"),"Riquelme Batista",1000);
+   Gerente funcionario(Cpf("123.456.789-11"),"Riquelme Batista",1000,"irfirirf");
 
   
     

@@ -1,7 +1,7 @@
 #include "Funcionario.hpp"
 #pragma once 
 
-class Atendente:public Funcionario{
+class Atendente final:public Funcionario{
 
 private:
 
