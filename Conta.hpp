@@ -10,14 +10,19 @@ static int numeroDeContas;
 private:
     std::string numeroConta;
     Titular titular;
-    float saldo;
+    
+protected:
+float saldo;        
+    
 
 public:
     Conta(std::string numero,Titular titular);
+    virtual ~Conta();
     void sacar(float valorASacar);
     void depositar(float valorADepositar);
     float olharSaldo() const; //Esse método não modifica nada , por isso usei o const 
     std::string olharNumeroConta();
+    virtual float taxaDeSaque()const;
     
 
     
