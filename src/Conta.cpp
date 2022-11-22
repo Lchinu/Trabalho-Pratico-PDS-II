@@ -6,7 +6,12 @@
 
 int Conta::numeroDeContas=0;
 
-
+/**
+ * @brief Construtor da classe Conta
+ *  
+ * @param numeroConta 
+ * @param titular 
+ */
 Conta::Conta(std::string numeroConta, Titular titular):
     numeroConta(numeroConta), 
     titular(titular),
@@ -16,6 +21,11 @@ Conta::Conta(std::string numeroConta, Titular titular):
 }
 
 
+/**
+ * @brief Função para sacar um valor da conta
+ * 
+ * @param valorASacar 
+ */
 void Conta::sacar(float valorASacar){
     if(valorASacar<0){
         std::cout<<"Impossível sacar valores negativos"<<std::endl;
@@ -33,6 +43,11 @@ void Conta::sacar(float valorASacar){
         saldo=saldo-valorDoSaque;
 }
 
+/**
+ * @brief Função para depositar um valor na conta
+ * 
+ * @param valorADepositar 
+ */
 void Conta::depositar(float valorADepositar){
     if(valorADepositar<0){
         std::cout<<"Impossível depositar valores negativos"<<std::endl;
@@ -43,10 +58,20 @@ void Conta::depositar(float valorADepositar){
     }
 }
 
+/**
+ * @brief Função para verificar o saldo da conta
+ * 
+ * @return float 
+ */
 float Conta::olharSaldo() const  { //Esse método não modifica nada por isso usei o const
     return saldo;
 }
 
+/**
+ * @brief Função para olhar o número da conta
+ * 
+ * @return std::string 
+ */
 std::string Conta::olharNumeroConta(){
     return numeroConta;
 }
