@@ -1,18 +1,11 @@
 #include<iostream>
 #include<string>
+
 #include "Conta.hpp"
-#include "Conta.cpp"
 #include "Titular.hpp"
-#include "Titular.cpp"
 #include "Cpf.hpp"
-#include "Cpf.cpp"
 #include "Funcionario.hpp"
-#include "Funcionario.cpp"
 #include "Pessoa.hpp"
-#include "Pessoa.cpp"
-
-
-
 
 using namespace std;
 
