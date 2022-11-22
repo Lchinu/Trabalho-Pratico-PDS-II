@@ -1,15 +1,13 @@
 #pragma once
-#include<string>
+#include <string>
 
-class Cpf{
-    private:
+class Cpf
+{
+private:
     std::string cpf;
 
-    public:
+public:
     Cpf(std::string cpfuser);
     std::string recuperaCpf();
     bool validacaoDeCpf();
-   
-
-
 };
