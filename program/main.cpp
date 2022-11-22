@@ -16,16 +16,25 @@ void ExibeSaldo(Conta &conta)
 
 int main()
 {
+    try
+    {
+        Titular titular(Cpf("123.456.789-10"), "Douglas Lima");
 
-    Titular titular(Cpf("123.456.789-10"), "Douglas Lima");
+        Conta umaConta("123456", titular);
+        umaConta.depositar(1000);
+        umaConta.sacar(499);
 
-    Conta umaConta("123456", titular);
-    umaConta.depositar(1000);
-    umaConta.sacar(499);
+        ExibeSaldo(umaConta);
 
-    ExibeSaldo(umaConta);
-
-    Funcionario funcionario(Cpf("123.456.789-11"), "Riquelme Batista", 1000);
+        Funcionario funcionario(Cpf("123.456.789-11"), "Riquelme Batista", 1000);
+        
+    }
+    catch (exception& e)
+    {
+        cout << e.what() << endl;
+        cout << endl << "Aperte qualquer tecla para continuar...";
+        cin.get();
+    }
 
     return 0;
 }
