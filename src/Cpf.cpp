@@ -1,4 +1,5 @@
 #include "Cpf.hpp"
+#include "validacpfcnpj.hpp"
 #include <string>
 #include <iostream>
 
@@ -10,11 +11,9 @@
 Cpf::Cpf(std::string cpfuser)
 {
     cpf = cpfuser;
-    validacaoDeCpf();
-    if (validacaoDeCpf() == 0)
+    if (validacaoDeCpf())
     {
-        std::cout << "Insira um CPF válido por favor " << std::endl;
-        exit(1);
+        throw std::runtime_error("CPF inválido");
     }
     std::cout << "Cpf criado" << std::endl;
 }
@@ -37,18 +36,20 @@ std::string Cpf::recuperaCpf()
  */
 bool Cpf::validacaoDeCpf()
 {
+    std::string pre_cpf = cpf;
     if (cpf.size() == 14)
-    { // Respeita o formato xxx.xxx.xxx-xx (14 caracteres)
-
-        return true;
+    {
+        pre_cpf.erase(3, 1);
+        pre_cpf.erase(6, 1);
+        pre_cpf.erase(9, 1);
+        return ValidaCPFCNPJ::validaCPF(pre_cpf);
     }
     if (cpf.size() == 11)
-    { // Respeita o formato xxxxxxxxxxx (11 caracteres)
-
-        return true;
+    {
+        return ValidaCPFCNPJ::validaCPF(cpf);
     }
     else
     {
-        return false; // Se o cpf não obedecer esses formatos , ele é inválido .
+        return false;
     }
 }
