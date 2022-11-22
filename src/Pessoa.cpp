@@ -19,8 +19,5 @@ Pessoa::Pessoa(Cpf cpf, std::string nome) : cpf(cpf), nome(nome)
 void Pessoa::verificaTamanhoDoNome()
 {
     if (nome.size() < 5)
-    {
-        std::cout << "Nome muito pequeno" << std::endl;
-        exit(1);
-    }
+        throw std::runtime_error("Nome muito curto");
 }

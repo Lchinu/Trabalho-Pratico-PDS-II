@@ -27,18 +27,13 @@ Conta::Conta(std::string numeroConta, Titular titular) : numeroConta(numeroConta
 void Conta::sacar(float valorASacar)
 {
     if (valorASacar < 0)
-    {
-        std::cout << "Impossível sacar valores negativos" << std::endl;
-    }
+        throw std::runtime_error("Não é possível sacar um valor negativo");
 
     float tarifaDeSaque = valorASacar * 0.001;
     float valorDoSaque = valorASacar + tarifaDeSaque;
 
     if (saldo < valorDoSaque)
-    {
-        std::cout << "Saldo insuficiente" << std::endl;
-        exit(1);
-    }
+        throw std::runtime_error("Saldo insuficiente");
 
     saldo = saldo - valorDoSaque;
 }
@@ -51,14 +46,9 @@ void Conta::sacar(float valorASacar)
 void Conta::depositar(float valorADepositar)
 {
     if (valorADepositar < 0)
-    {
-        std::cout << "Impossível depositar valores negativos" << std::endl;
-        exit(1);
-    }
+        throw std::runtime_error("Não é possível depositar um valor negativo");
     else
-    {
         saldo = saldo + valorADepositar;
-    }
 }
 
 /**
@@ -67,7 +57,7 @@ void Conta::depositar(float valorADepositar)
  * @return float
  */
 float Conta::olharSaldo() const
-{ // Esse método não modifica nada por isso usei o const
+{
     return saldo;
 }
 
