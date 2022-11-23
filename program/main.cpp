@@ -6,6 +6,11 @@
 #include "Cpf.hpp"
 #include "Funcionario.hpp"
 #include "Pessoa.hpp"
+#include "Banco.hpp"
+#include "Caixa.hpp"
+#include "Gerente.hpp"
+#include "ContaPoupanca.hpp"
+#include "ContaUniversitaria.hpp"
 
 using namespace std;
 
