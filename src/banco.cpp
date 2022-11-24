@@ -1,97 +1,107 @@
-#include "conta.hpp"
+#include "banco.hpp"
 
-float Conta::taxaSaque()
+bool existe(std::string palavra, std::vector<std::string> vetor)
 {
-    return 0.05;
-}
-
-Conta::Conta(Titular t) : titular(t) { saldo = 0; }
-
-void Conta::realizaSaque(float valorSaque)
-{
-    float taxa = valorSaque * taxaSaque();
-    if (valorSaque < 0)
+    for (int i = 0; i < vetor.size(); i++)
     {
-        std::cout << "Nao eh possivel realizar saque de valores negativos." << std::endl;
-        return;
+        if (vetor[i] == palavra)
+        {
+            return true;
+        }
     }
-    if (saldo < valorSaque + taxa)
+    return false;
+}
+
+Banco::Banco()
+{
+    std::cout << "\n\n*******Bem Vindo ao Banco!*******" << std::endl;
+    std::cout << "*********************************\n\n"
+              << std::endl;
+    saldo = 10000;
+}
+
+void Banco::realizaOperacao(int opcao, Conta *conta)
+{
+    if (opcao == 1)
     {
-        std::cout << "Saldo indisponivel para sacar esse valor." << std::endl;
-        return;
+        float valorSaque;
+        if (valorSaque <= saldo)
+        {
+            std::cout << "Digite o valor do saque: " << std::endl;
+            std::cin >> valorSaque;
+            conta->realizaSaque(valorSaque);
+        }
+        else
+        {
+            std::cout << "Saldo do banco insufucuente para esse saque.\n";
+        }
     }
-    saldo = saldo - valorSaque - taxa;
-    std::cout << "Saque no valor de " << valorSaque << " reais realizado com sucesso!" << std::endl;
-}
-
-void Conta::realizaDeposito(float valorDeposito)
-{
-    if (valorDeposito < 0)
+    else if (opcao == 2)
     {
-        std::cout << "Nao eh possivel realizar deposito de valores negativos." << std::endl;
-        return;
+        float valorDeposito;
+        std::cout << "Digite o valor do deposito: " << std::endl;
+        std::cin >> valorDeposito;
+        conta->realizaDeposito(valorDeposito);
     }
-    saldo += valorDeposito;
-    std::cout << "Deposito no valor de " << valorDeposito << " reais realizado com sucesso!" << std::endl;
-}
-
-float Conta::get_saldo()
-{
-    return saldo;
-}
-
-void Conta::imprimeSaldo()
-{
-    std::cout << "Saldo de " << titular.get_nome() << ": " << saldo << " reais." << std::endl;
-}
-
-void Conta::transfere(std::string userDestino, float valor, std::map<std::string, Conta *> contas)
-{
-    Conta *contaDestino = contas[userDestino];
-    if (saldo >= valor)
+    else if (opcao == 3)
     {
-        enviaValor(valor);
-        contaDestino->recebeValor(valor);
-        std::cout << "Transferencia no valor de " << valor << " reais realizada de " << titular.get_nome() << " para " << contaDestino->titular.get_nome() << "." << std::endl;
+        float valorTransferencia;
+        std::string userReceber;
+        std::cout << "Informe o valor a ser transferido e o usuario de quem vai receber: " << std::endl;
+        std::cin >> valorTransferencia >> userReceber;
+        conta->transfere(userReceber, valorTransferencia, Contas);
     }
-    else
+    else if (opcao == 4)
     {
-        std::cout << "Saldo insuficiente para essa transferencia." << std::endl;
+        conta->imprimeSaldo();
     }
 }
 
-Conta::~Conta()
+int Banco::selecionaOperacao()
 {
-    std::cout << "Conta de " << titular.get_nome() << " encerrada." << std::endl;
+    int opcao;
+    std::cout << "Digite a opcao referente a sua operacao:\n(1)Saque\n(2)Deposito\n(3)Transferencia\n(4)Saldo\n(5)Fazer login\n(6)Encerrar operacao." << std::endl;
+    std::cin >> opcao;
+    return opcao;
 }
 
-Titular *Conta::get_titular()
+void Banco::adicionaConta(Conta &conta)
 {
-    return &titular;
+    std::string nomeDoUsuario = conta.get_titular()->get_usuario();
+    Contas[nomeDoUsuario] = &conta;
+    Users.push_back(nomeDoUsuario);
 }
 
-void Conta::enviaValor(float valor)
+Conta *Banco::login()
 {
-    if (valor < 0)
+    bool logado = false;
+    std::string user;
+    std::string key;
+    do
     {
-        std::cout << "Nao eh possivel enviar valores negativos.\n";
-        return;
-    }
-    else
-    {
-        saldo -= valor;
-    }
-}
+        std::cout << "Insira seu nome de usuario: " << std::endl;
+        std::cin >> user;
+        if (existe(user, Users))
+        { // verifica se o nome de usuario digitado existe no vetor banco de usuarios
+            std::cout << "Insira sua senha: " << std::endl;
+            std::cin >> key;
+            if (key == Contas[user]->get_titular()->get_senha())
+            { //  verifica se a senha informada confere com a senha da conta referente ao nome de usuario
+                system("cls");
+                std::cout << "Login bem sucedido!\nBem vindo, " << Contas[user]->get_titular()->get_nome() << "." << std::endl;
+                logado = true;
+            }
+            else
+            {
+                std::cout << "Senha incorreta." << std::endl;
+                logado = false;
+            }
+        }
+        else
+        {
+            std::cout << "Ususario nao existe!" << std::endl;
+        }
+    } while (!logado);
 
-void Conta::recebeValor(float valor)
-{
-    if (valor < 0)
-    {
-        std::cout << "Nao eh possivel receber valores negativos.\n";
-        return;
-    }
-    else
-    {
-        saldo += valor;
-    }
+    return Contas[user];
 }
