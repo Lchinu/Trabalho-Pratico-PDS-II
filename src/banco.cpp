@@ -2,7 +2,7 @@
 
 bool existe(std::string palavra, std::vector<std::string> vetor)
 {
-    for (int i = 0; i < vetor.size(); i++)
+    for (unsigned int i = 0; i < vetor.size(); i++)
     {
         if (vetor[i] == palavra)
         {
