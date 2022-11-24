@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __PESSOA_HPP__
+#define __PESSOA_HPP__
+
 #include <iostream>
 #include <string>
 #include "cpf.hpp"
@@ -14,3 +16,5 @@ class Pessoa{
         int get_idade();
         std::string get_cpf();
 };
+
+#endif

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __CPF_HPP__
+#define __CPF_HPP__
+
 #include <string>
 #include <iostream>
 
@@ -11,3 +13,5 @@ class Cpf{
         std::string get_numero();
 
 };
+
+#endif

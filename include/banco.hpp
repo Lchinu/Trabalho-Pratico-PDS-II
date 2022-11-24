@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __BANCO_HPP__
+#define __BANCO_HPP__
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -20,3 +22,5 @@ class Banco{
         void realizaOperacao(int opcao, Conta* conta); // após selecionada a opção desejada, o caixa realiza a operação
         float get_saldo();
 };
+
+#endif

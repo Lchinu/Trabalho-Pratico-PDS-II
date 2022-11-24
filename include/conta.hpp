@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __CONTABANCARIA_HPP__
+#define __CONTABANCARIA_HPP__
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -22,3 +24,5 @@ class Conta{
         void enviaValor(float valor);
         void recebeValor(float valor);
 };
+
+#endif

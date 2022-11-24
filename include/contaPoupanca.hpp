@@ -1,5 +1,6 @@
+#ifndef __CONTAPOUPANCA_HPP__
+#define __CONTAPOUPANCA_HPP__
 
-#pragma once
 #include "conta.hpp"
 
 class ContaPoupanca : public Conta{
@@ -7,3 +8,5 @@ class ContaPoupanca : public Conta{
         ContaPoupanca(Titular t);
 		float taxaSaque() override;
 };
+
+#endif

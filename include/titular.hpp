@@ -1,9 +1,12 @@
-#pragma once
+#ifndef __TITULAR_HPP__
+#define __TITULAR_HPP__
+
 #include <iostream>
 #include <string>
 #include "pessoa.hpp"
 
-class Titular : public Pessoa{
+class Titular : public Pessoa
+{
     private:
         std::string senha;
         std::string usuario;
@@ -13,3 +16,5 @@ class Titular : public Pessoa{
         std::string get_senha();
         std::string get_usuario();
 };
+
+#endif
