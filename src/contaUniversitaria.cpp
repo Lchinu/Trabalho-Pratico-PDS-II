@@ -1,7 +1,8 @@
 #include "contaUniversitaria.hpp"
 
-ContaUniversitaria::ContaUniversitaria(Titular t) : Conta(t){}
+ContaUniversitaria::ContaUniversitaria(Titular t) : Conta(t) {}
 
-float ContaUniversitaria::taxaSaque(){
+float ContaUniversitaria::taxaSaque()
+{
 	return 0;
 }

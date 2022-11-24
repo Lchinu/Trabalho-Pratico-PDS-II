@@ -3,10 +3,11 @@
 
 #include "conta.hpp"
 
-class ContaUniversitaria : public Conta{
-    public:
-        ContaUniversitaria(Titular t);
-		float taxaSaque() override;
+class ContaUniversitaria : public Conta
+{
+public:
+    ContaUniversitaria(Titular t);
+    float taxaSaque() override;
 };
 
 #endif
