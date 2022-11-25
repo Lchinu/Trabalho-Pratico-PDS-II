@@ -51,7 +51,7 @@ void Banco::realizaOperacao(int opcao, Conta *conta)
         }
         else
         {
-            std::cout << "Saldo do banco insufucuente para esse saque.\n";
+            throw std::runtime_error("Saldo indisponivel para saque.");
         }
     }
     else if (opcao == 2)

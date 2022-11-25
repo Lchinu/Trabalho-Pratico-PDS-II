@@ -20,7 +20,7 @@ Cpf::Cpf(std::string n) : numero(n)
 {
     if (!cpfValido())
     {
-        std::cout << "Cpf invalido!" << std::endl;
+        throw std::runtime_error("Cpf invalido!");
     }
 }
 
