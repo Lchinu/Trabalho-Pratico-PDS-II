@@ -25,10 +25,10 @@ void Banco::realizaOperacao(int opcao, Conta *conta)
     if (opcao == 1)
     {
         float valorSaque;
+        std::cout << "Digite o valor do saque: " << std::endl;
+        std::cin >> valorSaque;
         if (valorSaque <= saldo)
         {
-            std::cout << "Digite o valor do saque: " << std::endl;
-            std::cin >> valorSaque;
             conta->realizaSaque(valorSaque);
         }
         else
