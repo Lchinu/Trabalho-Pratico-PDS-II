@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabalho Prático Programação Desenvolvimento de Software 2: Código-Fonte de Z:/home/lchinu/Trabalho pratico/Trabalho-Pratico-PDS-II/include/banco.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Trabalho Prático Programação Desenvolvimento de Software 2<span id="projectnumber">&#160;1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0a31c64d9f1f2c74acde1e4feea70c37.html">Z:</a></li><li class="navelem"><a class="el" href="dir_0a1c24d649f1fc9b234a63d114375ef0.html">home</a></li><li class="navelem"><a class="el" href="dir_f6467ac0728e262188161f1ac772f6d2.html">lchinu</a></li><li class="navelem"><a class="el" href="dir_ef1dfa179a1ee287986918ad55fb99a8.html">Trabalho pratico</a></li><li class="navelem"><a class="el" href="dir_79ceb155511aa4fd4eadb3b5b8b0af67.html">Trabalho-Pratico-PDS-II</a></li><li class="navelem"><a class="el" href="dir_6220645b883eaab9828021a42e5e1895.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">banco.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="banco_8hpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __BANCO_HPP__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __BANCO_HPP__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="conta_8hpp.html">conta.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_banco.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_banco.html">Banco</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">// string nome = &quot;&quot;;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_banco.html#a4ee0fd0ca0aea7fb138846c0933222f0">   14</a></span>    std::vector&lt;std::string&gt; <a class="code hl_variable" href="class_banco.html#a4ee0fd0ca0aea7fb138846c0933222f0">Users</a>;        <span class="comment">// vetor com os nomes de usuarios existentes, para conferencia no login</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_banco.html#ae2f597ec781737cac0c3de8af1b8fba8">   15</a></span>    std::map&lt;std::string, Conta *&gt; <a class="code hl_variable" href="class_banco.html#ae2f597ec781737cac0c3de8af1b8fba8">Contas</a>; <span class="comment">// mapa para buscar uma conta a partir de um nome de usuario existente(ponteiro para conta)</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_banco.html#a15ac827892eb9ef12a296e81519ead97">   16</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_banco.html#a15ac827892eb9ef12a296e81519ead97">saldo</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_function" href="class_banco.html#a686e51b219dc175e432e91559298b259">Banco</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_banco.html#a34888556a93812b8b0732f4232e2ef8e">adicionaConta</a>(<a class="code hl_class" href="class_conta.html">Conta</a> &amp;conta); <span class="comment">// adiciona conta criada ao banco, por referência</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_class" href="class_conta.html">Conta</a> *<a class="code hl_function" href="class_banco.html#ad2852d114da0b20eb31e044266e38967">login</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_banco.html#a6ca00f185c77fbd74935f5a6c0a07c27">selecionaOperacao</a>();                       <span class="comment">// o usuario logado escolhe a operacao que será realzada no caixa eletrônico</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_banco.html#a3adbe7c18cf6266f26cd5894bacb8490">realizaOperacao</a>(<span class="keywordtype">int</span> opcao, <a class="code hl_class" href="class_conta.html">Conta</a> *conta); <span class="comment">// após selecionada a opção desejada, o caixa realiza a operação</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_banco.html#aee47c976d9c912f0a171ba162bf5463b">   24</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_banco.html#aee47c976d9c912f0a171ba162bf5463b">get_saldo</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_banco_html"><div class="ttname"><a href="class_banco.html">Banco</a></div><div class="ttdef"><b>Definition:</b> banco.hpp:11</div></div>
+<div class="ttc" id="aclass_banco_html_a15ac827892eb9ef12a296e81519ead97"><div class="ttname"><a href="class_banco.html#a15ac827892eb9ef12a296e81519ead97">Banco::saldo</a></div><div class="ttdeci">float saldo</div><div class="ttdef"><b>Definition:</b> banco.hpp:16</div></div>
+<div class="ttc" id="aclass_banco_html_a34888556a93812b8b0732f4232e2ef8e"><div class="ttname"><a href="class_banco.html#a34888556a93812b8b0732f4232e2ef8e">Banco::adicionaConta</a></div><div class="ttdeci">void adicionaConta(Conta &amp;conta)</div><div class="ttdoc">Adiciona uma conta ao banco.</div><div class="ttdef"><b>Definition:</b> banco.cpp:118</div></div>
+<div class="ttc" id="aclass_banco_html_a3adbe7c18cf6266f26cd5894bacb8490"><div class="ttname"><a href="class_banco.html#a3adbe7c18cf6266f26cd5894bacb8490">Banco::realizaOperacao</a></div><div class="ttdeci">void realizaOperacao(int opcao, Conta *conta)</div><div class="ttdoc">Realiza uma operação de acordo com a opção escolhida pelo usuário.</div><div class="ttdef"><b>Definition:</b> banco.cpp:60</div></div>
+<div class="ttc" id="aclass_banco_html_a4ee0fd0ca0aea7fb138846c0933222f0"><div class="ttname"><a href="class_banco.html#a4ee0fd0ca0aea7fb138846c0933222f0">Banco::Users</a></div><div class="ttdeci">std::vector&lt; std::string &gt; Users</div><div class="ttdef"><b>Definition:</b> banco.hpp:14</div></div>
+<div class="ttc" id="aclass_banco_html_a686e51b219dc175e432e91559298b259"><div class="ttname"><a href="class_banco.html#a686e51b219dc175e432e91559298b259">Banco::Banco</a></div><div class="ttdeci">Banco()</div><div class="ttdoc">Construtor da classe Banco.</div><div class="ttdef"><b>Definition:</b> banco.cpp:44</div></div>
+<div class="ttc" id="aclass_banco_html_a6ca00f185c77fbd74935f5a6c0a07c27"><div class="ttname"><a href="class_banco.html#a6ca00f185c77fbd74935f5a6c0a07c27">Banco::selecionaOperacao</a></div><div class="ttdeci">int selecionaOperacao()</div><div class="ttdoc">Seleciona a operação que será realizada pelo usuário.</div><div class="ttdef"><b>Definition:</b> banco.cpp:104</div></div>
+<div class="ttc" id="aclass_banco_html_ad2852d114da0b20eb31e044266e38967"><div class="ttname"><a href="class_banco.html#ad2852d114da0b20eb31e044266e38967">Banco::login</a></div><div class="ttdeci">Conta * login()</div><div class="ttdoc">Realiza o login do usuário.</div><div class="ttdef"><b>Definition:</b> banco.cpp:130</div></div>
+<div class="ttc" id="aclass_banco_html_ae2f597ec781737cac0c3de8af1b8fba8"><div class="ttname"><a href="class_banco.html#ae2f597ec781737cac0c3de8af1b8fba8">Banco::Contas</a></div><div class="ttdeci">std::map&lt; std::string, Conta * &gt; Contas</div><div class="ttdef"><b>Definition:</b> banco.hpp:15</div></div>
+<div class="ttc" id="aclass_banco_html_aee47c976d9c912f0a171ba162bf5463b"><div class="ttname"><a href="class_banco.html#aee47c976d9c912f0a171ba162bf5463b">Banco::get_saldo</a></div><div class="ttdeci">float get_saldo()</div></div>
+<div class="ttc" id="aclass_conta_html"><div class="ttname"><a href="class_conta.html">Conta</a></div><div class="ttdef"><b>Definition:</b> conta.hpp:11</div></div>
+<div class="ttc" id="aconta_8hpp_html"><div class="ttname"><a href="conta_8hpp.html">conta.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>
