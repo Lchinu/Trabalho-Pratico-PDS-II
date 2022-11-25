@@ -1,0 +1,32 @@
+# doxyconfig
+# This file describes the settings to be used by the documentation system
+# doxygen (www.doxygen.org) for a project.
+#
+# All text after a hash (#) is considered a comment and will be ignored
+# The format is:
+#       TAG = value [value, ...]
+# For lists items can also be appended using:
+#       TAG += value [value, ...]
+# Values that contain spaces should be placed between quotes (" ")
+
+PROJECT_NAME           = "Trabalho Prático Programação Desenvolvimento de Software 2"
+PROJECT_NUMBER         = "Version 1"
+RECURSIVE              = YES
+INPUT                  = "."
+TAB_SIZE               = 4
+JAVADOC_AUTOBRIEF      = YES
+EXTRACT_ALL            = YES
+BUILTIN_STL_SUPPORT    = YES
+WARNINGS               = YES
+GENERATE_LATEX         = NO
+SORT_MEMBER_DOCS       = NO
+REPEAT_BRIEF           = YES
+######
+HAVE_DOT               = YES
+CLASS_DIAGRAMS         = YES
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = YES
+INCLUDE_GRAPH          = YES
+UML_LOOK               = YES
+UML_LIMIT_NUM_FIELDS   = 50
+HIDE_UNDOC_RELATIONS   = NO
