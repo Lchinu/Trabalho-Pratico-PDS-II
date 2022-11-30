@@ -1,4 +1,0 @@
-<map id="ContaPoupanca" name="ContaPoupanca">
-<area shape="rect" id="node1" title="Classe respnsável por linkar uma conta ao tipo poupança." coords="5,284,145,353"/>
-<area shape="rect" id="node2" href="$class_conta.html" title="Classe que direciona as operações criadas na classe banco." coords="10,5,141,236"/>
-</map>

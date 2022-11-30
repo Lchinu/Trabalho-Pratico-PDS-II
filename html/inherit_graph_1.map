@@ -1,5 +1,0 @@
-<map id="Representação gráfica da hiearquia da classe" name="Representação gráfica da hiearquia da classe">
-<area shape="rect" id="node1" href="$class_conta.html" title="Classe que direciona as operações criadas na classe banco." coords="5,31,61,56"/>
-<area shape="rect" id="node2" href="$class_conta_poupanca.html" title="Classe respnsável por linkar uma conta ao tipo poupança." coords="115,5,230,31"/>
-<area shape="rect" id="node3" href="$class_conta_universitaria.html" title="Classe respnsável por linkar uma conta ao tipo universitária." coords="109,55,236,80"/>
-</map>
