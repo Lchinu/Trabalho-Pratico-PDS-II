@@ -17,7 +17,7 @@ TEST_CASE("Testa realizaSaque")
 	Conta c(t);
 	c.realizaDeposito(200);
 	c.realizaSaque(100);
-	CHECK(c.get_saldo() == 100 - 0.05);
+	CHECK(c.get_saldo() == 95);
 }
 
 // testa throw de realizaSaque
