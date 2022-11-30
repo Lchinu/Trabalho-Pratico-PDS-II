@@ -112,7 +112,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 
 [documentacao-shield]: https://img.shields.io/badge/Documentação%20Doxygen-clique%20aqui-blue
-[documentacao-url]: https://www.youtube.com
+[documentacao-url]: https://lchinu.github.io/Trabalho-Pratico-PDS-II/index.html
 [linguagens-shield]: https://img.shields.io/github/languages/count/Lchinu/Trabalho-Pratico-PDS-II?style=for-the-badge
 [linguagens-url]: https://github.com/Lchinu/Trabalho-Pratico-PDS-II/
 [tamanho-shield]: https://img.shields.io/github/repo-size/Lchinu/Trabalho-Pratico-PDS-II?style=for-the-badge
