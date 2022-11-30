@@ -1,0 +1,4 @@
+<map id="Pessoa" name="Pessoa">
+<area shape="rect" id="node1" title="Classe criadora das pessoas." coords="11,5,109,148"/>
+<area shape="rect" id="node2" href="$class_titular.html" title="Classe responsável pela criação do login." coords="5,196,115,295"/>
+</map>
