@@ -17,5 +17,5 @@ TEST_CASE("Testa realizaSaque")
 	ContaPoupanca c(t);
 	c.realizaDeposito(200);
 	c.realizaSaque(100);
-	CHECK(c.get_saldo() == 100 - 0.01);
+	CHECK(c.get_saldo() == 99);
 }
