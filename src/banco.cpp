@@ -51,13 +51,13 @@ void Banco::realizaOperacao(int opcao, Conta *conta)
         }
         else
         {
-            throw std::runtime_error("Saldo indisponivel para saque.");
+            throw std::runtime_error("Saldo indisponível para saque.");
         }
     }
     else if (opcao == 2)
     {
         float valorDeposito;
-        std::cout << "\nDigite o valor do deposito: ";
+        std::cout << "Digite o valor do deposito: " << std::endl;
         std::cin >> valorDeposito;
         conta->realizaDeposito(valorDeposito);
     }
@@ -65,7 +65,7 @@ void Banco::realizaOperacao(int opcao, Conta *conta)
     {
         float valorTransferencia;
         std::string userReceber;
-        std::cout << "Informe o valor a ser transferido e o usuário de quem vai receber: " << std::endl;
+        std::cout << "Informe o valor a ser transferido e o usuario de quem vai receber: " << std::endl;
         std::cin >> valorTransferencia >> userReceber;
         conta->transfere(userReceber, valorTransferencia, Contas);
     }
@@ -83,8 +83,7 @@ void Banco::realizaOperacao(int opcao, Conta *conta)
 int Banco::selecionaOperacao()
 {
     int opcao;
-    std::cout << "Digite a opção referente a operação desejada:\n[1] - Saque\n[2] - Depósito\n[3] - Transferência\n[4] - Saldo\n[5] - Fazer login\n[6] - Encerrar operação\n";
-    std::cout << "====================================================================\n\n";
+    std::cout << "Digite a opcao referente a sua operacao:\n(1)Saque\n(2)Deposito\n(3)Transferencia\n(4)Saldo\n(5)Fazer login\n(6)Encerrar operacao." << std::endl;
     std::cin >> opcao;
     return opcao;
 }
@@ -113,8 +112,7 @@ Conta *Banco::login()
     std::string key;
     do
     {
-        std::cout << "====================================================================\n\n";
-        std::cout << "Insira seu nome de usuario: ";
+        std::cout << "Insira seu nome de usuario: " << std::endl;
         std::cin >> user;
         if (existe(user, Users))
         { // verifica se o nome de usuario digitado existe no vetor banco de usuarios
@@ -136,7 +134,7 @@ Conta *Banco::login()
         }
         else
         {
-            std::cout << "Usuário não existe!" << std::endl;
+            std::cout << "Ususario nao existe!" << std::endl;
         }
     } while (!logado);
 
