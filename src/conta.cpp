@@ -30,11 +30,11 @@ void Conta::realizaSaque(float valorSaque)
     float taxa = valorSaque * taxaSaque();
     if (valorSaque < 0)
     {
-        throw std::runtime_error("Nao e possivel sacar um valor negativo.");
+        throw std::runtime_error("Nao é possivel sacar um valor negativo.");
     }
     if (saldo < valorSaque + taxa)
     {
-        throw std::runtime_error("Saldo indisponivel para saque.");
+        throw std::runtime_error("Saldo indisponível para saque.");
     }
     saldo = saldo - valorSaque - taxa;
     std::cout << "Saque no valor de " << valorSaque << " reais realizado com sucesso!" << std::endl;
@@ -49,10 +49,10 @@ void Conta::realizaDeposito(float valorDeposito)
 {
     if (valorDeposito < 0)
     {
-        throw std::runtime_error("Nao e possivel depositar um valor negativo.");
+        throw std::runtime_error("Nao é possivel depositar um valor negativo.");
     }
     saldo += valorDeposito;
-    std::cout << "Deposito no valor de " << valorDeposito << " reais realizado com sucesso!" << std::endl;
+    std::cout << "Depósito no valor de " << valorDeposito << " reais realizado com sucesso!" << std::endl;
 }
 
 /**
@@ -88,11 +88,11 @@ void Conta::transfere(std::string userDestino, float valor, std::map<std::string
     {
         enviaValor(valor);
         contaDestino->recebeValor(valor);
-        std::cout << "Transferencia no valor de " << valor << " reais realizada de " << titular.get_nome() << " para " << contaDestino->titular.get_nome() << "." << std::endl;
+        std::cout << "Transferência no valor de " << valor << " reais realizada de " << titular.get_nome() << " para " << contaDestino->titular.get_nome() << "." << std::endl;
     }
     else
     {
-        throw std::runtime_error("Saldo indisponivel para transferencia.");
+        throw std::runtime_error("Saldo indisponível para transferência.");
     }
 }
 
@@ -124,7 +124,7 @@ void Conta::enviaValor(float valor)
 {
     if (valor < 0)
     {
-        throw std::runtime_error("Nao e possivel enviar um valor negativo.");
+        throw std::runtime_error("Nao é possivel enviar um valor negativo.");
     }
     else
     {
@@ -141,7 +141,7 @@ void Conta::recebeValor(float valor)
 {
     if (valor < 0)
     {
-        throw std::runtime_error("Nao e possivel receber um valor negativo.");
+        throw std::runtime_error("Nao é possivel receber um valor negativo.");
     }
     else
     {
