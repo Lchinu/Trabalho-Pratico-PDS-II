@@ -14,7 +14,7 @@ Titular::Titular(std::string n, int i, std::string c, std::string u, std::string
         usuario = u;
         senha = s;
 
-        std::cout << get_nome() << " foi registrado no banco." << std::endl;
+        std::cout << get_nome() << " foi registrado no banco.\n" << std::endl;
 }
 
 /**

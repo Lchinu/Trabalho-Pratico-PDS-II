@@ -26,8 +26,8 @@ bool existe(std::string palavra, std::vector<std::string> vetor)
  */
 Banco::Banco()
 {
-    std::cout << "\n\n*******Bem Vindo ao Banco!*******" << std::endl;
-    std::cout << "*********************************\n\n"
+    std::cout << "\n\n    ============ Seja bem-vindo ao NossoBanco! ================" << std::endl;
+    std::cout << "====================================================================\n"
               << std::endl;
     saldo = 10000;
 }
@@ -43,7 +43,7 @@ void Banco::realizaOperacao(int opcao, Conta *conta)
     if (opcao == 1)
     {
         float valorSaque;
-        std::cout << "Digite o valor do saque: " << std::endl;
+        std::cout << "Digite o valor do saque: ";
         std::cin >> valorSaque;
         if (valorSaque <= saldo)
         {
@@ -57,7 +57,7 @@ void Banco::realizaOperacao(int opcao, Conta *conta)
     else if (opcao == 2)
     {
         float valorDeposito;
-        std::cout << "Digite o valor do deposito: " << std::endl;
+        std::cout << "\nDigite o valor do deposito: ";
         std::cin >> valorDeposito;
         conta->realizaDeposito(valorDeposito);
     }
@@ -65,7 +65,7 @@ void Banco::realizaOperacao(int opcao, Conta *conta)
     {
         float valorTransferencia;
         std::string userReceber;
-        std::cout << "Informe o valor a ser transferido e o usuario de quem vai receber: " << std::endl;
+        std::cout << "Informe o valor a ser transferido e o usuário de quem vai receber: " << std::endl;
         std::cin >> valorTransferencia >> userReceber;
         conta->transfere(userReceber, valorTransferencia, Contas);
     }
@@ -83,7 +83,8 @@ void Banco::realizaOperacao(int opcao, Conta *conta)
 int Banco::selecionaOperacao()
 {
     int opcao;
-    std::cout << "Digite a opcao referente a sua operacao:\n(1)Saque\n(2)Deposito\n(3)Transferencia\n(4)Saldo\n(5)Fazer login\n(6)Encerrar operacao." << std::endl;
+    std::cout << "Digite a opção referente a operação desejada:\n[1] - Saque\n[2] - Depósito\n[3] - Transferência\n[4] - Saldo\n[5] - Fazer login\n[6] - Encerrar operação\n";
+    std::cout << "====================================================================\n\n";
     std::cin >> opcao;
     return opcao;
 }
@@ -112,16 +113,19 @@ Conta *Banco::login()
     std::string key;
     do
     {
-        std::cout << "Insira seu nome de usuario: " << std::endl;
+        std::cout << "====================================================================\n\n";
+        std::cout << "Insira seu nome de usuario: ";
         std::cin >> user;
         if (existe(user, Users))
         { // verifica se o nome de usuario digitado existe no vetor banco de usuarios
-            std::cout << "Insira sua senha: " << std::endl;
+            std::cout << "Insira sua senha: ";
             std::cin >> key;
             if (key == Contas[user]->get_titular()->get_senha())
             { //  verifica se a senha informada confere com a senha da conta referente ao nome de usuario
-                system("cls");
-                std::cout << "Login bem sucedido!\nBem vindo, " << Contas[user]->get_titular()->get_nome() << "." << std::endl;
+                system("clear");
+                std::cout << "====================================================================\n\n";
+                std::cout << "Login bem sucedido! Seja bem-vindo, " << Contas[user]->get_titular()->get_nome() << "." << std::endl;
+                std::cout << "\n====================================================================\n\n";
                 logado = true;
             }
             else
@@ -132,7 +136,7 @@ Conta *Banco::login()
         }
         else
         {
-            std::cout << "Ususario nao existe!" << std::endl;
+            std::cout << "Usuário não existe!" << std::endl;
         }
     } while (!logado);
 

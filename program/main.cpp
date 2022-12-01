@@ -39,7 +39,7 @@ int main()
 
                 if (operacao == 5)
                 {
-                    system("clear");
+                    system("cls");
                     contaLogada = banco.login();
                 }
 
