@@ -1,13 +1,6 @@
 #include "banco.hpp"
 
-/**
- * @brief Verifica se existe uma conta com o usuário passado
- * 
- * @param palavra 
- * @param vetor 
- * @return true 
- * @return false 
- */
+
 bool existe(std::string palavra, std::vector<std::string> vetor)
 {
     for (unsigned int i = 0; i < vetor.size(); i++)
