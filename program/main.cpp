@@ -7,6 +7,11 @@
 #include "pessoa.hpp"
 #include "titular.hpp"
 #include "contaUniversitaria.hpp"
+#include "transacao.hpp"
+#include "ExcecaoCpf.hpp"
+#include "ExcecaoNegativo.hpp"
+#include "ExcecaoSaque.hpp"
+#include "ExcecaoTransferencia.hpp"
 
 using namespace std;
 
@@ -25,6 +30,16 @@ int main()
         ContaPoupanca p1(t2);
         banco.adicionaConta(p1);
 
+        Titular t3("Lucas", 20, "11125298618", "lchinu", "2424");
+        ContaPoupanca p2(t3);
+        banco.adicionaConta(p2);
+
+        Titular t4("Camila", 22, "02374573699", "laranjeira", "1234");
+        ContaPoupanca p4(t4);
+        banco.adicionaConta(p4);
+        
+        
+
         Conta *contaLogada = banco.login();
 
         int operacao = 0;
@@ -41,13 +56,34 @@ int main()
                 {
                     //system("");
                     contaLogada = banco.login();
-                }
-
+                }           
+                else if(operacao == 7 || operacao == 0) {
+                break;
+                }   
+              
             }
-            catch (exception &e)
+            catch (ExcecaoNegativo &e)
             {
                 cout << e.what() << endl;
-                cout << "Aperte qualquer tecla para continuar." << endl;
+                cout << "====================================================================\n";
+                cin.get();
+            }
+            catch (ExcecaoSaque &e)
+            {
+                cout << e.what() << endl;
+                cout << "====================================================================\n";
+                cin.get();
+            }
+            catch (ExcecaoCpf &e)
+            {
+                cout << e.what() << endl;
+                cout << "====================================================================\n";
+                cin.get();
+            }
+            catch (ExcecaoTransferencia &e)
+            {
+                cout << e.what() << endl;
+                cout << "====================================================================\n";
                 cin.get();
             }
 
@@ -56,7 +92,7 @@ int main()
     catch (exception &e)
     {
         cout << e.what() << endl;
-        cout << "Aperte qualquer tecla para sair." << endl;
+        cout << "====================================================================\n";
         cin.get();
     }
 }

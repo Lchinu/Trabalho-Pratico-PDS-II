@@ -15,7 +15,24 @@
 
 ## Começando 🚀
 
-> [![Documentação Doxygen][documentacao-shield]][documentacao-url]
+O projeto presente neste repositório e nomeado pelos seus colaboradores como "caixa eletrônico do GECA" tem como seu principal objetivo replicar o funcionamento
+de um caixa eletrônico. As funções implementadas são as seguintes:
+
+🔸Logar: responsável por exercer a função do cartão nos caixas, essa função pede o usuário e sua respectiva senha;
+
+🔸Sacar: o usuário pode realizar um saque de determinado valor (é preciso ser um valor disponível tanto em sua conta, quanto no limite do caixa);
+
+🔸Depositar: o usuário tem o poder de depositar um valor para sua conta (ilimitado);
+
+🔸Transferir: o caixa suporta inúmeros usuário que podem fazer transferências entre si;
+
+🔸Extrato: é possível visualizar todas as operações realizadas por todos os usuários usando essa função.
+
+⚠️ Além destas funções que são expostas ao rodar o código, também foi implementado no código a verificação de CPF e a atribuição de idade, nome e o próprio CPF
+para todos os usuários. 
+
+Com isso, foi possível replicar o funcionamento do caixa utilizando as habilidades adquiridas na disciplina Programação e Desenvolvimento de Software II.
+
 
 Para começar a utilizar o repositório, você precisa cumprir todos os requisitos abaixo:
 
@@ -26,6 +43,7 @@ Para começar a utilizar o repositório, você precisa cumprir todos os requisit
 * Ter o cmake instalado.
 * Ter o git instalado.
 * Estar em um ambiente linux e/ou derivado.
+* Ter o gcov instalado.
 
 <p align="right">(<a href="#top">Voltar para o topo</a>)</p>
 
@@ -107,6 +125,15 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
         </sub>
       </a>
     </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/100239569" width="100px;" alt="joaoalves31"/><br>
+        <sub>
+          <b>joaoalves31</b>
+        </sub>
+      </a>
+    </td>
+    
   </tr>
 </table>
 
