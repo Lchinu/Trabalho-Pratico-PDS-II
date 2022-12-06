@@ -40,6 +40,7 @@ class Transacao{
 		 * 
 		 */
 		std::string autor;
+		std::string destino;
 	public:
 		/**
 	 * @brief Construtor do objeto Transacao
@@ -55,6 +56,7 @@ class Transacao{
 		 * 
 		 * @return float valor
 		 */
+		Transacao(float v, std::string t, std::string a, std::string d);
 		float get_valor();
 		/**
 		 * @brief Definido o tipo do objeto 
@@ -67,5 +69,6 @@ class Transacao{
 		 * 
 		 * @return std::string  autor da transação
 		 */
-		std::string get_autor();		
+		std::string get_autor();	
+		std::string get_destino();	
 };

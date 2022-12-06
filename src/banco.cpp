@@ -102,7 +102,7 @@ void Banco::realizaOperacao(int opcao, Conta *conta)
 		                }
 
             conta-> transfere(userReceber, valorTransferencia, Contas);
-            Transacao t(valorTransferencia, "Transferência", conta->get_titular()->get_nome());
+           Transacao t(valorTransferencia, "Transferencia", conta->get_titular()->get_nome(), Contas[userReceber]->get_titular()->get_nome());
             transacoes.push_back(t);
             }
         }    
@@ -194,9 +194,14 @@ Conta *Banco::login()
     return Contas[user];
 }
 
-   void Banco::imprimeExtrato(){
+  void Banco::imprimeExtrato(){
     for(int i=0;i<transacoes.size();i++){
-        std::cout << "Tipo de transação: " << transacoes[i].get_tipo() << " ↦ Valor: " << transacoes[i].get_valor() << " ↦ Autor: " << transacoes[i].get_autor() << std::endl;
+        if(transacoes[i].get_tipo() != "Transferencia"){
+        std::cout << "Tipo de transacao: " << transacoes[i].get_tipo() << " -> Valor: " << transacoes[i].get_valor() << " -> Autor: " << transacoes[i].get_autor() << std::endl;
         std::cout << std::endl;
+        }else{
+            std::cout << "Tipo de transacao: " << transacoes[i].get_tipo() << " -> Valor: " << transacoes[i].get_valor() << " -> Autor: " << transacoes[i].get_autor() << " -> Destino: " << transacoes[i].get_destino() << std::endl;
+            std::cout << std::endl;
+        }
     }
 }
