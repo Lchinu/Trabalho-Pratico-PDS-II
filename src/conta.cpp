@@ -18,17 +18,18 @@ void Conta::realizaSaque(float valorSaque)
     float taxa = valorSaque * taxaSaque();
     if (valorSaque < 0)
     {
+        std::cout << "===================================================================="<< std::endl;
         throw std::runtime_error("Nao é possivel sacar um valor negativo.");
     }
     if (saldo < valorSaque + taxa)
-
     {
+        std::cout << "===================================================================="<< std::endl;
         throw std::runtime_error("Saldo indisponível para saque.");
     }
     std::cout << "===================================================================="<< std::endl;
     saldo = saldo - valorSaque - taxa;
     std::cout << "Saque no valor de " << valorSaque << " reais realizado com sucesso!";
-    std::cout << "\n====================================================================\n\n";
+    std::cout << "====================================================================\n\n";
 }
 
 
@@ -36,11 +37,15 @@ void Conta::realizaDeposito(float valorDeposito)
 {
     if (valorDeposito < 0)
     {
+        std::cout << "====================================================================\n" << std::endl;
         throw std::runtime_error("Não é possível depositar um valor negativo.");
+        std::cout << "====================================================================\n" << std::endl;
     }
     std::cout << "===================================================================="<< std::endl;
     saldo += valorDeposito;
     std::cout << "Depósito no valor de " << valorDeposito << " reais realizado com sucesso!" << std::endl;
+    std::cout << "\====================================================================\n" << std::endl;
+    
 }
 
 
@@ -53,7 +58,7 @@ float Conta::get_saldo()
 void Conta::imprimeSaldo()
 {
     std::cout << "Saldo de " << titular.get_nome() << ": " << saldo << " reais." << std::endl;
-    std::cout << "\n====================================================================\n\n" << std::endl;
+    std::cout << "\n====================================================================\n" << std::endl;
 }
 
 
@@ -64,11 +69,15 @@ void Conta::transfere(std::string userDestino, float valor, std::map<std::string
     {
         enviaValor(valor);
         contaDestino->recebeValor(valor);
+        std::cout << "====================================================================\n" << std::endl;
         std::cout << "Transferência no valor de " << valor << " reais realizada de " << titular.get_nome() << " para " << contaDestino->titular.get_nome() << "." << std::endl;
+        std::cout << "====================================================================\n" << std::endl;
     }
     else
     {
+        std::cout << "====================================================================" << std::endl;
         throw std::runtime_error("Saldo indisponível para transferência.");
+        std::cout << "====================================================================" << std::endl;
     }
 }
 
@@ -88,7 +97,9 @@ void Conta::enviaValor(float valor)
 {
     if (valor < 0)
     {
+        std::cout << "\n====================================================================\n" << std::endl;
         throw std::runtime_error("Não é possivel enviar um valor negativo.");
+        std::cout << "\n====================================================================\n" << std::endl;
     }
     else
     {
@@ -101,7 +112,9 @@ void Conta::recebeValor(float valor)
 {
     if (valor < 0)
     {
+        std::cout << "\n====================================================================\n" << std::endl;
         throw std::runtime_error("Não é possível receber um valor negativo.");
+        std::cout << "\n====================================================================\n" << std::endl;
     }
     else
     {

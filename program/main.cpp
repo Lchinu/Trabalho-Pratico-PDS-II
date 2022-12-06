@@ -65,7 +65,7 @@ int main()
                 cin.get();
             }
 
-        } while (operacao != 7);
+        } while (operacao != 6);
     }
     catch (exception &e)
     {
