@@ -13,10 +13,7 @@ bool existe(std::string palavra, std::vector<std::string> vetor)
     return false;
 }
 
-/**
- * @brief Construtor da classe Banco
- * 
- */
+
 Banco::Banco()
 {
     std::cout << "\n\n    ============ Seja bem-vindo ao NossoBanco! ================" << std::endl;
@@ -25,12 +22,7 @@ Banco::Banco()
     saldo = 10000;
 }
 
-/**
- * @brief Realiza uma operação de acordo com a opção escolhida pelo usuário
- * 
- * @param opcao 
- * @param conta 
- */
+
 void Banco::realizaOperacao(int opcao, Conta *conta)
 {
     if (opcao == 1)
@@ -68,11 +60,7 @@ void Banco::realizaOperacao(int opcao, Conta *conta)
     }
 }
 
-/**
- * @brief Seleciona a operação que será realizada pelo usuário
- * 
- * @return int 
- */
+
 int Banco::selecionaOperacao()
 {
     int opcao;
@@ -81,11 +69,7 @@ int Banco::selecionaOperacao()
     return opcao;
 }
 
-/**
- * @brief Adiciona uma conta ao banco
- * 
- * @param conta 
- */
+
 void Banco::adicionaConta(Conta &conta)
 {
     std::string nomeDoUsuario = conta.get_titular()->get_usuario();
@@ -93,11 +77,7 @@ void Banco::adicionaConta(Conta &conta)
     Users.push_back(nomeDoUsuario);
 }
 
-/**
- * @brief Realiza o login do usuário
- * 
- * @return Conta* 
- */
+
 Conta *Banco::login()
 {
     bool logado = false;
