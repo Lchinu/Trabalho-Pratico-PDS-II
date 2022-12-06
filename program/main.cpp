@@ -7,6 +7,7 @@
 #include "pessoa.hpp"
 #include "titular.hpp"
 #include "contaUniversitaria.hpp"
+#include "transacao.hpp"
 
 using namespace std;
 
@@ -21,9 +22,19 @@ int main()
         ContaUniversitaria c1(t1);
         banco.adicionaConta(c1);
 
-        Titular t2("Paulo", 22, "12782581678", "pauloh", "8600");
+        Titular t2("Riquelme", 22, "12782581678", "riquelmao", "8600");
         ContaPoupanca p1(t2);
         banco.adicionaConta(p1);
+
+        Titular t3("Lucas", 20, "11125298618", "lchinu", "2424");
+        ContaPoupanca p2(t3);
+        banco.adicionaConta(p2);
+
+        Titular t4("Camila", 22, "02374573699", "laranjeira", "1234");
+        ContaPoupanca p4(t4);
+        banco.adicionaConta(p4);
+        
+        
 
         Conta *contaLogada = banco.login();
 
@@ -39,24 +50,27 @@ int main()
 
                 if (operacao == 5)
                 {
-                    system("cls");
+                    system("clear");
                     contaLogada = banco.login();
-                }
-
+                }           
+                else if(operacao == 7 || operacao == 0) {
+                break;
+                }   
+              
             }
             catch (exception &e)
             {
                 cout << e.what() << endl;
-                cout << "Aperte qualquer tecla para continuar." << endl;
+                cout << "====================================================================\n";
                 cin.get();
             }
 
-        } while (operacao != 6);
+        } while (operacao != 7);
     }
     catch (exception &e)
     {
         cout << e.what() << endl;
-        cout << "Aperte qualquer tecla para sair." << endl;
+        cout << "====================================================================\n";
         cin.get();
     }
 }

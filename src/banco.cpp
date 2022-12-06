@@ -1,6 +1,7 @@
 #include "banco.hpp"
 
 
+
 bool existe(std::string palavra, std::vector<std::string> vetor)
 {
     for (unsigned int i = 0; i < vetor.size(); i++)
@@ -17,8 +18,7 @@ bool existe(std::string palavra, std::vector<std::string> vetor)
 Banco::Banco()
 {
     std::cout << "\n\n    ============ Seja bem-vindo ao NossoBanco! ================" << std::endl;
-    std::cout << "====================================================================\n"
-              << std::endl;
+    std::cout << "====================================================================\n";
     saldo = 10000;
 }
 
@@ -28,35 +28,93 @@ void Banco::realizaOperacao(int opcao, Conta *conta)
     if (opcao == 1)
     {
         float valorSaque;
-        std::cout << "Digite o valor do saque: ";
+        std::cout << "Digite o valor do saque ou digite 9 para cancelar a operação" << std::endl;
         std::cin >> valorSaque;
-        if (valorSaque <= saldo)
-        {
-            conta->realizaSaque(valorSaque);
+        if (valorSaque == 9){
+            system("clear");
+            Banco::selecionaOperacao();
         }
-        else
-        {
-            throw std::runtime_error("Saldo indisponível para saque.");
+            else { 
+            if (valorSaque <= saldo)
+            {
+                conta->realizaSaque(valorSaque);
+                Transacao t(valorSaque, "Saque", conta->get_titular()->get_nome());
+            transacoes.push_back(t);
+            }
+            else
+            {
+                throw std::runtime_error("\nSeu saldo não é suficiente para este saque!");
+            }
         }
     }
+
     else if (opcao == 2)
     {
-        float valorDeposito;
-        std::cout << "Digite o valor do deposito: " << std::endl;
-        std::cin >> valorDeposito;
-        conta->realizaDeposito(valorDeposito);
+        
+            float valorDeposito;
+            std::cout << "Digite o valor do depósito ou digite 9 para cancelar a operação" << std::endl;
+            std::cin >> valorDeposito;
+                if (valorDeposito == 9){
+                    system("clear");
+                    Banco::selecionaOperacao();
+                }
+            else 
+            {
+            conta->realizaDeposito(valorDeposito);
+            Transacao t(valorDeposito, "Depósito", conta->get_titular()->get_nome());
+            transacoes.push_back(t);
+        }
     }
     else if (opcao == 3)
     {
-        float valorTransferencia;
-        std::string userReceber;
-        std::cout << "Informe o valor a ser transferido e o usuario de quem vai receber: " << std::endl;
-        std::cin >> valorTransferencia >> userReceber;
-        conta->transfere(userReceber, valorTransferencia, Contas);
-    }
+            float valorTransferencia;
+            bool usuarioExiste =  false;
+            std::string userReceber;
+            std::cout << "Informe o valor a ser transferido e o usuário de quem vai receber ou digite 9 para cancelar a operação: " << std::endl;
+            std::cin >> valorTransferencia >> userReceber;
+            if (valorTransferencia == 9){
+                    system("clear");
+                Banco::selecionaOperacao();
+                }
+            else if (valorTransferencia != 9) {
+                while(!usuarioExiste){
+                    if(existe(userReceber,Users)){
+        	            usuarioExiste = true;
+                }         
+        
+                    else {
+			            usuarioExiste = false;
+                        std::cout << "====================================================================\n";
+			            std::cout << "Digite um usuário válido.\n";
+                        std::cout << "====================================================================\n";
+		                }
+
+            conta-> transfere(userReceber, valorTransferencia, Contas);
+            Transacao t(valorTransferencia, "Transferência", conta->get_titular()->get_nome());
+            transacoes.push_back(t);
+            }
+        }    
+    } 
     else if (opcao == 4)
     {
         conta->imprimeSaldo();
+    }
+    else if (opcao == 5)
+    {
+        std::cout << "====================================================================\n";
+    }
+    else if (opcao == 6)
+    {   
+        if (transacoes.size() == 0) {
+            std::cout << "Nenhuma transação foi realizada\n";
+            std::cout << "====================================================================\n";
+        }
+        else if (transacoes.size() != 0) {
+        std::cout << "====================================================================\n";
+        std::cout << "Extrato: \n\n";
+            imprimeExtrato(); 
+        std::cout << "====================================================================\n";
+        }
     }
 }
 
@@ -64,7 +122,8 @@ void Banco::realizaOperacao(int opcao, Conta *conta)
 int Banco::selecionaOperacao()
 {
     int opcao;
-    std::cout << "Digite a opcao referente a sua operacao:\n(1)Saque\n(2)Deposito\n(3)Transferencia\n(4)Saldo\n(5)Fazer login\n(6)Encerrar operacao." << std::endl;
+    std::cout << "Digite a opção referente a sua operação:\n[1] - Saque\n[2] - Depósito\n[3] - Transferência\n[4] - Saldo\n[5] - Fazer login\n[6] - Extrato\n[7] - Cancelar operação" << std::endl;
+    std::cout << "====================================================================\n";
     std::cin >> opcao;
     return opcao;
 }
@@ -85,11 +144,12 @@ Conta *Banco::login()
     std::string key;
     do
     {
-        std::cout << "Insira seu nome de usuario: " << std::endl;
+        std::cout << "\n====================================================================\n\n";
+        std::cout << "Insira seu nome de usuário: ";
         std::cin >> user;
         if (existe(user, Users))
-        { // verifica se o nome de usuario digitado existe no vetor banco de usuarios
-            std::cout << "Insira sua senha: ";
+        { // verifica se o nome de usuario digitado existe no vetor banco de usuarios;
+            std::cout << "Insira sua senha de 4 dígitos: ";
             std::cin >> key;
             if (key == Contas[user]->get_titular()->get_senha())
             { //  verifica se a senha informada confere com a senha da conta referente ao nome de usuario
@@ -101,15 +161,22 @@ Conta *Banco::login()
             }
             else
             {
-                std::cout << "Senha incorreta." << std::endl;
+                std::cout << "Senha incorreta. Tente novamente! ";
                 logado = false;
             }
         }
         else
         {
-            std::cout << "Ususario nao existe!" << std::endl;
+            std::cout << "Usuário não existe! Tente novamente!" << std::endl;
         }
     } while (!logado);
 
     return Contas[user];
+}
+
+   void Banco::imprimeExtrato(){
+    for(int i=0;i<transacoes.size();i++){
+        std::cout << "Tipo de transacao: " << transacoes[i].get_tipo() << " -> Valor: " << transacoes[i].get_valor() << " -> Autor: " << transacoes[i].get_autor() << std::endl;
+        std::cout << std::endl;
+    }
 }
