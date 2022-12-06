@@ -107,6 +107,15 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
         </sub>
       </a>
     </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/100239569" width="100px;" alt="joaoalves31"/><br>
+        <sub>
+          <b>joaoalves31</b>
+        </sub>
+      </a>
+    </td>
+    
   </tr>
 </table>
 
