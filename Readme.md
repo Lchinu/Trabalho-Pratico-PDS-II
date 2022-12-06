@@ -15,7 +15,8 @@
 
 ## Começando 🚀
 
-> [![Documentação Doxygen][documentacao-shield]][documentacao-url]
+O projeto presente neste repositório e nomeado pelos seus colaboradores como "caixa eletrônico do GECA" tem como seu principal objetivo replicar o funcionamento
+de um caixa eletrônico. As funções implementadas
 
 Para começar a utilizar o repositório, você precisa cumprir todos os requisitos abaixo:
 
