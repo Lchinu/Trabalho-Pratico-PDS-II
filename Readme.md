@@ -43,6 +43,7 @@ Para começar a utilizar o repositório, você precisa cumprir todos os requisit
 * Ter o cmake instalado.
 * Ter o git instalado.
 * Estar em um ambiente linux e/ou derivado.
+* Ter o gcov instalado.
 
 <p align="right">(<a href="#top">Voltar para o topo</a>)</p>
 
