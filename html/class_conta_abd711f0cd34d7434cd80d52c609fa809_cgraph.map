@@ -1,0 +1,6 @@
+<map id="Conta::transfere" name="Conta::transfere">
+<area shape="rect" id="node1" title="Transfere um valor para outra conta." coords="5,55,120,80"/>
+<area shape="rect" id="node2" href="$class_conta.html#abfad02c9df7613b614f460ca35cb01df" title="Enviar um valor específico." coords="173,5,296,31"/>
+<area shape="rect" id="node3" href="$class_pessoa.html#a34b68331ab3c85806eb1d98c3203a359" title="É definido para o objeto pessoa um nome." coords="169,55,300,80"/>
+<area shape="rect" id="node4" href="$class_conta.html#a0e3fd0b12bd74fe63e280995e5b156ed" title="Recebe um valor específico." coords="168,104,301,129"/>
+</map>

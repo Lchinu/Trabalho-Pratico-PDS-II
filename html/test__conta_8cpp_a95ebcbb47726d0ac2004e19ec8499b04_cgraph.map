@@ -1,0 +1,5 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="node1" title=" " coords="5,5,103,31"/>
+<area shape="rect" id="node2" href="$class_conta.html#a82c23c19eb795d3a5902d9c6c91737e5" title="Realiza um saque da conta logada." coords="151,5,289,31"/>
+<area shape="rect" id="node3" href="$class_conta.html#a3c4eb6c5bc2f231841ea4f497211142a" title="Define a taxa a conta logada deve pagar para sacar." coords="337,5,464,31"/>
+</map>

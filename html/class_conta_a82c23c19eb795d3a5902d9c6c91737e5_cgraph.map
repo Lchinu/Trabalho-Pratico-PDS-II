@@ -1,0 +1,4 @@
+<map id="Conta::realizaSaque" name="Conta::realizaSaque">
+<area shape="rect" id="node1" title="Realiza um saque da conta logada." coords="5,5,144,31"/>
+<area shape="rect" id="node2" href="$class_conta.html#a3c4eb6c5bc2f231841ea4f497211142a" title="Define a taxa a conta logada deve pagar para sacar." coords="192,5,319,31"/>
+</map>

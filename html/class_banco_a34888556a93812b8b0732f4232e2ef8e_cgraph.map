@@ -1,0 +1,5 @@
+<map id="Banco::adicionaConta" name="Banco::adicionaConta">
+<area shape="rect" id="node1" title="Adiciona conta criada ao banco, por referência." coords="5,31,155,56"/>
+<area shape="rect" id="node2" href="$class_conta.html#ad2edd6afe6af8b7d0705a5cbb28640e1" title="Busca o titular da conta logada." coords="208,5,329,31"/>
+<area shape="rect" id="node3" href="$class_titular.html#abf98b5451eb5d30a49324d510df17f35" title="Definido o usuário titular da conta." coords="203,55,335,80"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Pessoa::get_cpf" name="Pessoa::get_cpf">
+<area shape="rect" id="node1" title="É definido para o objeto pessoa um cpf." coords="5,5,121,31"/>
+<area shape="rect" id="node2" href="$class_cpf.html#aa9d6880cf52553a4672deaf20e6f72ac" title="Pede o numero do cpf de um determinado usuário." coords="169,5,287,31"/>
+</map>
