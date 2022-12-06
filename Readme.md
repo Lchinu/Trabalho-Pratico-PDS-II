@@ -17,10 +17,15 @@
 
 O projeto presente neste repositório e nomeado pelos seus colaboradores como "caixa eletrônico do GECA" tem como seu principal objetivo replicar o funcionamento
 de um caixa eletrônico. As funções implementadas são as seguintes:
+
 🔸Logar: responsável por exercer a função do cartão nos caixas, essa função pede o usuário e sua respectiva senha;
+
 🔸Sacar: o usuário pode realizar um saque de determinado valor (é preciso ser um valor disponível tanto em sua conta, quanto no limite do caixa);
+
 🔸Depositar: o usuário tem o poder de depositar um valor para sua conta (ilimitado);
+
 🔸Transferir: o caixa suporta inúmeros usuário que podem fazer transferências entre si;
+
 🔸Extrato: é possível visualizar todas as operações realizadas por todos os usuários usando essa função.
 
 ⚠️ Além destas funções que são expostas ao rodar o código, também foi implementado no código a verificação de CPF e a atribuição de idade, nome e o próprio CPF
