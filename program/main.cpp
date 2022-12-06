@@ -17,11 +17,11 @@ int main()
     {
         Banco banco;
 
-        Titular t1("Matheus", 23, "13535745632", "mathewshq", "2607");
+        Titular t1("Matheus", 23, "13535745632", "", "2607");
         ContaUniversitaria c1(t1);
         banco.adicionaConta(c1);
 
-        Titular t2("Paulo", 22, "12782581678", "pauloh", "8600");
+        Titular t2("Riquelme Batista", 22, "12782581678", "Riquelme3m", "1111");
         ContaPoupanca p1(t2);
         banco.adicionaConta(p1);
 
@@ -39,7 +39,7 @@ int main()
 
                 if (operacao == 5)
                 {
-                    system("cls");
+                    //system("");
                     contaLogada = banco.login();
                 }
 
