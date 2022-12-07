@@ -34,6 +34,8 @@ para todos os usuários.
 Com isso, foi possível replicar o funcionamento do caixa utilizando as habilidades adquiridas na disciplina Programação e Desenvolvimento de Software II.
 
 Para conferir os user stories e o diagrama de classes, abra o seguinte link:
+[Diagrama de Classes e User Stories](https://drive.google.com/drive/folders/1cvfTX_nM4hIMSaTGDjOpk2J5u71Z3WPO?usp=sharing)
+
 
 Para começar a utilizar o repositório, você precisa cumprir todos os requisitos abaixo:
 
@@ -154,7 +156,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   </tr>
 </table>
 
-
+[user-shield
 [documentacao-shield]: https://img.shields.io/badge/Documentação%20Doxygen-clique%20aqui-blue
 [linguagens-shield]: https://img.shields.io/github/languages/count/Lchinu/Trabalho-Pratico-PDS-II?style=for-the-badge
 [linguagens-url]: https://github.com/Lchinu/Trabalho-Pratico-PDS-II/
