@@ -65,6 +65,11 @@ Para começar a utilizar o repositório, você precisa cumprir todos os requisit
     ```sh
     make
     ```
+4. Execute o comando `make tests` para realizar os testes.
+    ```sh
+    make tests
+    ```
+    
 <p align="right">(<a href="#top">Voltar para o topo</a>)</p>
 
 ## Como utilizar o Trabalho Prático
