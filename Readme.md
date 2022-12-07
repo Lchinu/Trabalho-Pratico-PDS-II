@@ -80,6 +80,22 @@ Para começar a utilizar, após a instalação, basta rodar:
 
 <p align="right">(<a href="#top">Voltar para o topo</a>)</p>
 
+### Acessar a documentação
+
+1. Clone o repositório.
+   ```sh
+   git clone https://github.com/Lchinu/Trabalho-Pratico-PDS-II.git
+   ```
+2. Entre na pasta onde foi clonado em seu computador
+    ```sh
+    Procure a origem do arquivo
+    ```
+3. Entre na pasta html
+    ```sh
+    Procure o arquivo "annotated" e abra em seu navegador.
+    ```
+<p align="right">(<a href="#top">Voltar para o topo</a>)</p>
+
 ## Contruibuindo
 
 As contribuições são o que tornam a comunidade de código aberto um lugar incrível para aprender, inspirar e criar. Quaisquer contribuições que você fizer são **muito apreciadas**.
