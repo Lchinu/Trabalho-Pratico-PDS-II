@@ -25,7 +25,7 @@ TEST_CASE("Testa throw de realizaSaque")
 {
 	Titular t("Joao", 20, "12345678900", "joao", "123");
 	Conta c(t);
-	CHECK_THROWS_AS(c.realizaSaque(100), std::runtime_error);
+	CHECK_THROWS(c.realizaSaque(100));
 }
 
 // testa realiza deposito

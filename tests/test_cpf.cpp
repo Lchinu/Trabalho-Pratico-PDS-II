@@ -15,7 +15,7 @@ TEST_CASE("Teste 2 - Construtor")
 	CHECK(cpf.get_numero() == "12345678901");
 
 	// cria um cpf com mais de 11 digitos e ve se dar um runtime_error
-	CHECK_THROWS_AS(Cpf("1234567891011"), std::runtime_error);
+	CHECK_THROWS(Cpf("1234567891011"));
 }
 
 TEST_CASE("Teste 3 - Construtor")
@@ -25,5 +25,5 @@ TEST_CASE("Teste 3 - Construtor")
 	CHECK(cpf.get_numero() == "12345678901");
 
 	// cria um cpf com menos de 11 digitos e ve se dar um runtime_error
-	CHECK_THROWS_AS(Cpf("1234567890"), std::runtime_error);
+	CHECK_THROWS(Cpf("1234567890"));
 }
