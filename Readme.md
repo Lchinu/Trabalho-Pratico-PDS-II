@@ -94,7 +94,7 @@ Para começar a utilizar, após a instalação, basta rodar:
 - Usuários para transferências(senhas entre parênteses):
 
 ```sh
-  lchinu(2424), Riquelme3m(1111), mathewsq(2607), ojuanlp(0910).
+  lchinu(2424), Riquelme3m(1111), mathewsq(2607) e ojuanlp(0910).
 ```
 
 <p align="right">(<a href="#top">Voltar para o topo</a>)</p>
