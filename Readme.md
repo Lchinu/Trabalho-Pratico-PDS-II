@@ -156,7 +156,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   </tr>
 </table>
 
-[user-shield
+
 [documentacao-shield]: https://img.shields.io/badge/Documentação%20Doxygen-clique%20aqui-blue
 [linguagens-shield]: https://img.shields.io/github/languages/count/Lchinu/Trabalho-Pratico-PDS-II?style=for-the-badge
 [linguagens-url]: https://github.com/Lchinu/Trabalho-Pratico-PDS-II/
