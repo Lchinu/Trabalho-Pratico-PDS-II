@@ -42,6 +42,10 @@ int main()
         ContaPoupanca p5(t5);
         banco.adicionaConta(p5);
         
+        Titular t6("Juan", 21, "11150830662", "ojuanlp", "0910");
+        ContaPoupanca p6(t6);
+        banco.adicionaConta(p6);
+        
 
         Conta *contaLogada = banco.login();
 
