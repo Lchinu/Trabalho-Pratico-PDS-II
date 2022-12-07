@@ -45,21 +45,32 @@ class Transacao{
 		/**
 	 * @brief Construtor do objeto Transacao
 	 * @details Construção das transações organizadas uma a uma para imprimeExtrato,
-	 * todas as operações realizadas entre usuários é registrada aqui.
+	 * todas as operações realizadas entre usuários é registrada aqui. Esse construtor 
+	 * é responsável apenas pelo saque e depósito.
 	 * @param v Valor da transação
 	 * @param t Tipo da operação
 	 * @param a Autor da operação
 	 */
 		Transacao(float v, std::string t, std::string a);
 		/**
+		 * @brief Construtor do objeti transação
+		 * 
+		 * @param v 
+		 * @param t 
+		 * @param a 
+		 * @param d 
+		 */
+
+		Transacao(float v, std::string t, std::string a, std::string d);
+		/**
 		 * @brief Definido o valor da transação
 		 * 
 		 * @return float valor
 		 */
-		Transacao(float v, std::string t, std::string a, std::string d);
+		
 		float get_valor();
 		/**
-		 * @brief Definido o tipo do objeto 
+		 * @brief Definido o tipo da operação
 		 * 
 		 * @return std::string tipo da transação
 		 */
@@ -69,6 +80,11 @@ class Transacao{
 		 * 
 		 * @return std::string  autor da transação
 		 */
-		std::string get_autor();	
+		std::string get_autor();
+		/**
+		 * @brief Definindo o usuário que irá receber a transação.
+		 * 
+		 * @return * std::string 
+		 */
 		std::string get_destino();	
 };

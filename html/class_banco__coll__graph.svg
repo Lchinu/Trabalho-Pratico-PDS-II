@@ -258,21 +258,23 @@
 <g id="node13" class="node">
 <title>Node13</title>
 <g id="a_node13"><a xlink:href="class_transacao.html" target="_top" xlink:title="Classe organizadora das operações realizadas.">
-<polygon fill="white" stroke="#666666" points="441.5,-354.5 360.5,-354.5 360.5,-280.5 441.5,-280.5 441.5,-354.5"/>
-<text text-anchor="middle" x="401" y="-342.5" font-family="Helvetica,sans-Serif" font-size="10.00">{Transacao</text>
-<text text-anchor="start" x="368.5" y="-331.5" font-family="Helvetica,sans-Serif" font-size="10.00">||+ Transacao()</text>
-<text text-anchor="start" x="368.5" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get_valor()</text>
-<text text-anchor="start" x="368.5" y="-309.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get_tipo()</text>
-<text text-anchor="start" x="368.5" y="-298.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get_autor()</text>
-<text text-anchor="middle" x="401" y="-287.5" font-family="Helvetica,sans-Serif" font-size="10.00">}</text>
+<polygon fill="white" stroke="#666666" points="442,-365.5 360,-365.5 360,-269.5 442,-269.5 442,-365.5"/>
+<text text-anchor="middle" x="401" y="-353.5" font-family="Helvetica,sans-Serif" font-size="10.00">{Transacao</text>
+<text text-anchor="start" x="368" y="-342.5" font-family="Helvetica,sans-Serif" font-size="10.00">||+ Transacao()</text>
+<text text-anchor="start" x="368" y="-331.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Transacao()</text>
+<text text-anchor="start" x="368" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get_valor()</text>
+<text text-anchor="start" x="368" y="-309.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get_tipo()</text>
+<text text-anchor="start" x="368" y="-298.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get_autor()</text>
+<text text-anchor="start" x="368" y="-287.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get_destino()</text>
+<text text-anchor="middle" x="401" y="-276.5" font-family="Helvetica,sans-Serif" font-size="10.00">}</text>
 </a>
 </g>
 </g>
 <!-- Node13&#45;&gt;Node12 -->
 <g id="edge14" class="edge">
 <title>Node13&#45;&gt;Node12</title>
-<path fill="none" stroke="#404040" d="M401,-280.19C401,-256.09 401,-224.97 401,-202.93"/>
-<polygon fill="none" stroke="#404040" points="401,-202.84 397,-196.84 401,-190.84 405,-196.84 401,-202.84"/>
+<path fill="none" stroke="#404040" d="M401,-269.16C401,-247.1 401,-221.64 401,-202.84"/>
+<polygon fill="none" stroke="#404040" points="401,-202.82 397,-196.82 401,-190.82 405,-196.82 401,-202.82"/>
 <text text-anchor="middle" x="425.5" y="-216" font-family="Helvetica,sans-Serif" font-size="10.00"> +elements</text>
 </g>
 </g>

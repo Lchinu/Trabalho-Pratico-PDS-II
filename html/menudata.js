@@ -27,7 +27,7 @@ var menudata={children:[
 {text:"Classes",url:"annotated.html",children:[
 {text:"Lista de componentes",url:"annotated.html"},
 {text:"Índice dos componentes",url:"classes.html"},
-{text:"Hierarquia de classes",url:"hierarchy.html"},
+{text:"Hierarquia de classes",url:"inherits.html"},
 {text:"Componentes membro",url:"functions.html",children:[
 {text:"Tudo",url:"functions.html",children:[
 {text:"a",url:"functions.html#index_a"},
@@ -43,6 +43,7 @@ var menudata={children:[
 {text:"s",url:"functions.html#index_s"},
 {text:"t",url:"functions.html#index_t"},
 {text:"u",url:"functions.html#index_u"},
+{text:"w",url:"functions.html#index_w"},
 {text:"~",url:"functions.html#index__7E"}]},
 {text:"Funções",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
@@ -56,6 +57,7 @@ var menudata={children:[
 {text:"r",url:"functions_func.html#index_r"},
 {text:"s",url:"functions_func.html#index_s"},
 {text:"t",url:"functions_func.html#index_t"},
+{text:"w",url:"functions_func.html#index_w"},
 {text:"~",url:"functions_func.html#index__7E"}]},
 {text:"Variáveis",url:"functions_vars.html"}]}]},
 {text:"Ficheiros",url:"files.html",children:[
