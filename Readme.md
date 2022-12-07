@@ -33,13 +33,14 @@ para todos os usuários.
 
 Com isso, foi possível replicar o funcionamento do caixa utilizando as habilidades adquiridas na disciplina Programação e Desenvolvimento de Software II.
 
-Para conferir os user stories e o diagrama de classes, abra o seguinte link:
+## Diagrama de classes e user stories 🔎
+
+Para conferir, abra o seguinte link:
 [Diagrama de Classes e User Stories](https://drive.google.com/drive/folders/1cvfTX_nM4hIMSaTGDjOpk2J5u71Z3WPO?usp=sharing)
 
 
-Para começar a utilizar o repositório, você precisa cumprir todos os requisitos abaixo:
-
 ### Pré-requisitos
+Para começar a utilizar o repositório, você precisa cumprir todos os requisitos abaixo:
 
 * Ter um compilador c++ instalado.
 * Ter o mingw na versão 11.2.0 e/ou c++ na versão 17 ou superior.
